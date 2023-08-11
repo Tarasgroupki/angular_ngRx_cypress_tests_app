@@ -1,0 +1,38 @@
+<h1>
+  Create new Product:
+</h1>
+<div class="form-group">
+  <mat-form-field>
+    <label for="title">Title</label>
+    <input id="title" matInput class="form-control" name="title" [(ngModel)]="product.title" required minlength="4" #title="ngModel"/>
+  </mat-form-field>
+  <div class="form-control-feedback"
+       *ngIf="title.errors && (title.dirty || title.touched)">
+    <p *ngIf="title.errors.required">Title is required</p>
+  </div>
+</div>
+<div class="form-group">
+  <mat-form-field>
+    <label for="description">Description</label>
+    <textarea id="description" matInput type="text" class="form-control" name="description" [(ngModel)]="product.description" required #description="ngModel"></textarea>
+  </mat-form-field>
+  <div class="form-control-feedback"
+       *ngIf="description.errors && (description.dirty || description.touched)">
+    <p *ngIf="description.errors.required">Description is required</p>
+  </div>
+</div>
+<div class="form-group">
+  <mat-form-field>
+    <mat-form-field>
+      <label for="price">Price</label>
+      <input id="price" matInput type="text" class="form-control" name="price" [(ngModel)]="product.price" required #price="ngModel" />
+    </mat-form-field>
+  </mat-form-field>
+  <div class="form-control-feedback"
+       *ngIf="price.errors && (price.dirty || price.touched)">
+    <p *ngIf="price.errors.required">Price assigned required</p>
+  </div>
+</div>
+<div class="form-group">
+  <button class="product-btn" mat-button (click)="addProduct()">Добавити</button>
+</div>

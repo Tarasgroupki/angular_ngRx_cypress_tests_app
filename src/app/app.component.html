@@ -1,0 +1,16 @@
+<!--<div *ngIf="route !== '/login' && route !== '**'">-->
+  <div class="top-menu">
+  </div>
+  <div class="container">
+    <div class="main">
+      <a *ngIf="route !== '/login' && route !== '**'" class="links logout" style="text-align: center;" (click)="removeAuth()" routerLinkActive="active"><button style="text-align: center;position: relative;width:100%;" mat-button (click)="removeAuth()"><h2>Вихід</h2></button></a>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+<!--</div>-->
+<!--<div *ngIf="route === '/login'">-->
+<!--  <app-auth></app-auth>-->
+<!--</div>-->
+<!--<div *ngIf="route === '**'">-->
+<!--  <app-not-found></app-not-found>-->
+<!--</div>-->

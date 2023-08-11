@@ -1,0 +1,9 @@
+<div class="view" *ngIf="product$ | async as product">
+  <mat-list role="list">
+    <mat-list-item role="listitem">ID: {{product['id']}}</mat-list-item>
+    <mat-list-item role="listitem">Title: {{product['title']}}</mat-list-item>
+    <mat-list-item role="listitem">Description: {{product['description']}}</mat-list-item>
+    <mat-list-item role="listitem">Price: {{product['price']}}</mat-list-item>
+  </mat-list>
+  <a routerLink="/create" routerLinkActive="active"><button mat-button class="edit">{{ 'Створити' }}</button></a>
+</div>
