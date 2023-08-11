@@ -9,9 +9,9 @@ export const productReducers = (
     case EProductActions.ProductsAll:
       return (action as any)?.payload;
     case EProductActions.ProductOne:
-      return (action as any)?.payload;
+      return action?.payload;
     case EProductActions.ProductCreate:
-      return (action as any)?.payload;
+      return action?.payload;
     default:
       return state;
   }
